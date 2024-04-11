@@ -23,7 +23,7 @@ body {
 }
 
 .left-column img {
-    border-radius: 50%;
+    border-radius: 40%;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -31,9 +31,9 @@ body {
 }
 
 .right-column {
-    width: 100%; /* Occupy the entire width of the container */
+    width: 75%; /* Occupy the entire width of the container */
     padding: 20px;
-    margin-top: 0; /* Adjusted margin-top to align with the top */
+    margin: 0; /* Adjusted margin-top to align with the top */
 }
 
 .project {
