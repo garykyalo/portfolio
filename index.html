@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Portfolio</title>
+    <title>Mark Kyalo</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -14,23 +14,39 @@
     <div class="container">
       <div class="left-column">
         <img src="static/profile.jpg" alt="Profile Picture" />
-        <h2>Mark Kyalo Mulyungi</h2>
-        <h3>Data Analyst</h3>
-        <h5>Insert text</h5>
-        <br />
-        <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
-        <a href="mailto:your.email@example.com"
+        <h3>Mark Kyalo Mulyungi</h3>
+        <h4>Data Analyst</h4>
+        <a href="tel:+254718812593" class="contact-link"
+          ><i class="fas fa-phone"></i
+        ></a>
+        <a href="mailto:mulyungim268@gmail.com" class="contact-link"
           ><i class="fas fa-envelope"></i
         ></a>
-        <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/254718812593" class="contact-link"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://www.fiverr.com/garymarks" class="fiverr-link"
+          >Fiverr</a
+        >
         <h4>About</h4>
-        <h6>Insert text</h6>
+        <p>
+          Data Analyst/Python Backend Developer. background in economics and
+          Finance. I am excited about the potential of data analytics to
+          transform businesses and optimize decision-making processes.
+        </p>
         <h4>Skills</h4>
-        <h6>Insert text</h6>
+        <p>Python</p>
+        <p>R</p>
+        <p>SQL</p>
+        <p>Excel, Power bi</p>
         <h4>Languages</h4>
-        <h6>Insert text</h6>
+        <h6>- English</h6>
+        <h6>- Swahili</h6>
         <h4>Education</h4>
-        <h6>Insert text</h6>
+        <h6>Kenyatta University, 2015</h6>
+        <p>Bachelor of Economics</p>
+        <h6>Tech Camp Kenya, 2018</h6>
+        <p>Advanced Data Analytics Training</p>
       </div>
 
       <div class="right-column">
@@ -41,12 +57,17 @@
               <div class="project">
                 <h3>Project 1</h3>
                 <p>Description of Project 1.</p>
-                <a href="#">View Project</a>
+                <a
+                  href="https://github.com/garykyalo/portfolio/blob/main/index.html"
+                  >View Project</a
+                >
               </div>
               <div class="project">
                 <h3>Project 2</h3>
                 <p>Description of Project 2.</p>
-                <a href="#">View Project</a>
+                <a href="https://github.com/garykyalo/Car-charging-Barnet-city"
+                  >View Project</a
+                >
               </div>
               <div class="project">
                 <h3>Project 3</h3>
@@ -63,33 +84,32 @@
         </section>
         <section id="experience">
           <h2>Experience</h2>
-          <p>Your Experience Details</p>
+          <h5>Kenya National Commission on Human Rights (KNCHR)</h5>
+          <h6>Research assistant</h6>
+          <p>
+            Arranging and conducting interviews with selected respondents.
+            <br />
+            making reports about the survey and analyzing the data collected.
+          </p>
+          <h5>Fiverr</h5>
+          <p>
+            Provided data analysis services to several clients, ensuring high
+            quality and timely delivery on the fiver platform <br />
+            Managed communication, determined project scope, and ensured
+            professional collaboration with clients garnering positive reviews
+            as a sin of customer satisfaction.
+          </p>
         </section>
-
-        <!-- Placeholder for README content -->
-        <div id="readme-content"></div>
       </div>
     </div>
 
     <footer>
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+      <p>&copy; 2024 Mark Kyalo. All rights reserved.</p>
       <a href="#">Twitter</a>
-      <a href="#">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mark-mulyungi-51210738/">LinkedIn</a>
       <a href="#">GitHub</a>
+      <a href="#"><i class="fab fa-fiverr"></i></a>
       <!-- Add more social media links as needed -->
     </footer>
-
-    <!-- Script to fetch and display README content -->
-    <script src="https://cdn.jsdelivr.net/npm/showdown@1.10.2/dist/showdown.min.js"></script>
-    <script>
-      async function displayReadme() {
-        const response = await fetch("README.md");
-        const markdown = await response.text();
-        const converter = new showdown.Converter();
-        const html = converter.makeHtml(markdown);
-        document.getElementById("readme-content").innerHTML = html;
-      }
-      displayReadme();
-    </script>
   </body>
 </html>
