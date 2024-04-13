@@ -117,3 +117,34 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold; /* Bold text */
     text-decoration: none; /* Remove default underline */
 }
+
+
+.project-image {
+    width: 400px; /* Adjust the width as per your requirement */
+    height: 200px; /* Maintain aspect ratio */
+}
+
+.canada-image {
+    display: inline-block;
+    vertical-align: top; /* Align images from the top */
+    width: 200px; /* Adjust the width as per your requirement */
+    height: 200px;
+}
+
+
+ /* Style for anchor tag with class "complete-paper" */
+ a.complete-paper {
+    color: blue; /* Set the text color to blue */
+    text-decoration: none; /* Remove underline */
+    outline: none; /* Remove outline on focus */
+}
+
+/* Style for anchor tag with class "complete-paper" when hovered */
+a.complete-paper:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Style for anchor tag with class "complete-paper" when focused */
+a.complete-paper:focus {
+    text-decoration: none; /* Remove underline on focus */
+}
