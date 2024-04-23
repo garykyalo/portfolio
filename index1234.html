@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-lightgreen">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <a class="navbar-brand" href="/">Yeah</a>
+          <form id="searchForm" class="form-inline" method="post">
+            <div class="input-group">
+              <input
+                id="keyword"
+                name="keyword"
+                type="text"
+                class="form-control"
+                placeholder="Insert Keywords"
+              />
+              <div class="input-group-append">
+                <button id="searchBtn" type="submit" class="btn btn-primary">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="form-inline">
+            <label for="period" class="mr-2">Set Period:</label>
+            <select id="period" name="period" class="form-control">
+              <option value="5days">Last five days</option>
+              <option value="1month">Last month</option>
+              <option value="3months">Last 3 months</option>
+              <option value="Custom">Custom period</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="left-column">
+        <img src="static/profile11.jpg" alt="" />
+        <h3>Summaries</h3>
+        <h4>Data Analyst</h4>
+        <a href="tel:+254718812593" class="contact-link"
+          ><i class="fas fa-phone"></i
+        ></a>
+        <a href="mailto:mulyungim268@gmail.com" class="contact-link"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://wa.me/254718812593" class="contact-link"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://www.fiverr.com/garymarks" class="fiverr-link"
+          >Fiverr</a
+        >
+        <h4></h4>
+      </div>
+
+      <div class="right-column">
+        <section id="projects">
+          <div>
+            <h1>Some Summaries</h1>
+            {% for keyword, rows in data.items() %}
+            <h2>{{ keyword }}</h2>
+            <table border="1" style="width: 50%; border-collapse: collapse">
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <!-- Add more columns as needed -->
+              </tr>
+              {% for row in rows[:10] %}
+              <tr>
+                <td style="height: 20px; width: 20%">
+                  {{ row.formatted_date }}
+                </td>
+                <td style="height: 20px; width: 20%">{{ row.name }}</td>
+                <td style="height: 20px; width: 20%">{{ row.amount }}</td>
+                <!-- Add more columns as needed -->
+              </tr>
+              {% endfor %}
+            </table>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Mark Kyalo. All rights reserved.</p>
+      <a href="#">Twitter</a>
+      <a href="https://www.linkedin.com/in/mark-mulyungi-51210738/">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#"><i class="fab fa-fiverr"></i></a>
+      <!-- Add more social media links as needed -->
+    </footer>
+  </body>
+</html>
